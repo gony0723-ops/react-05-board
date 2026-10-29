@@ -1,5 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router";
 import Home from "./routes/Home.jsx";
+import Details from "./routes/Detail.jsx";
 
 function App() {
     return (
@@ -11,6 +12,7 @@ function App() {
           <Routes>
             {/* React가 읽어들인 "/" 경로에 따라 Routes는 저 쪽으로 가라고 지시함 */}
               <Route path={"/"} element={<Home />} />
+            <Route path={"/:id"} element={<Detail />}  />
           </Routes>
       </BrowserRouter>
     );
